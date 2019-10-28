@@ -18,7 +18,7 @@ const TABS = {
     navigationOptions: {
       tabBarLabel: '新闻',
       tabBarIcon: ({ tintColor, focused }) => (
-        <FontAwesome name={"book"} size={26} style={{ color: tintColor }} />
+        <FontAwesome name={"newspaper-o"} size={26} style={{ color: tintColor }} />
         )
     }
   },
@@ -28,7 +28,7 @@ const TABS = {
     navigationOptions: {
       tabBarLabel: '我的',
       tabBarIcon: ({ tintColor, focused }) => (
-        <FontAwesome name={"home"} size={26} style={{ color: tintColor }} />
+        <FontAwesome name={"user"} size={26} style={{ color: tintColor }} />
         )
     }
   }
