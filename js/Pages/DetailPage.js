@@ -6,22 +6,29 @@ import {
 } from 'react-native';
 import DataStore from '../Http/AsyncStorange'
 
-const DetailPage = () => {
-  const dataStore = new DataStore() 
-  useEffect(() => {
-    
+class DetailPage extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    let dataStore = new DataStore() 
     let url = `http://v.juhe.cn/movie/index?key=e3024168a12eebdd3490d6dd024b570a&title=%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C`;
     dataStore.fetchData(url)
       .then(res => {
-        console.log(res)
+        console.log(res,  'detail')
       })
-  })
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>welcome to DetailPage</Text>
-    </View>
-  );
-};
+    
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.text}>welcome to DetailPage</Text>
+      </View>
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   container: {

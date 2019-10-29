@@ -7,7 +7,7 @@ export default class DataStore {
     targetDate.setTime(timestamp)
     if(currentDate.getMonth() !== targetDate.getMonth()) return false 
     if(currentDate.getDate() !== targetDate.getDate()) return false 
-    if(currentDate.getHours() - targetHours.getHours() > 4) return false 
+    if(currentDate.getHours() - targetDate.getHours() > 4) return false 
     return true
   } 
 
@@ -32,6 +32,7 @@ export default class DataStore {
         })
         .catch(error => {
           //获取网络数据
+          console.error(error)
           this.fetchNetData(url)
           .then(data => {
             resolve(this._wrapData(data))
@@ -68,7 +69,6 @@ export default class DataStore {
   }
 
   fetchNetData(url) {
-    console.log(url)
     return new Promise((resolve, reject) => {
       fetch(url)
         .then(response => {
