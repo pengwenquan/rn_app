@@ -3,8 +3,11 @@ import {
   StyleSheet,
   View,
   Text,
+  Button
 } from 'react-native';
 import DataStore from '../Http/AsyncStorange'
+import { connect } from 'react-redux'
+import { onThemeChange } from '../Actions/theme'
 
 class DetailPage extends React.Component {
   constructor(props) {
@@ -22,9 +25,15 @@ class DetailPage extends React.Component {
   }
 
   render() {
+    const { onThemeChange } = this.props
+    console.log(this.props)
     return (
       <View style={styles.container}>
         <Text style={styles.text}>welcome to DetailPage</Text>
+        <Button 
+          title="改变主题"
+          onPress={() => {onThemeChange('pink')}}
+        />
       </View>
     )
   }
@@ -41,4 +50,12 @@ const styles = StyleSheet.create({
   }
 });
 
-export default DetailPage;
+
+const mapStateToProps = state => ({
+  theme: state.theme.theme
+})
+
+const mapDispatchToProps = dispatch => ({
+  onThemeChange: theme => dispatch(onThemeChange(theme))
+})
+export default connect(mapStateToProps, mapDispatchToProps)(DetailPage);
