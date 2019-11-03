@@ -7,18 +7,40 @@ import {
 } from 'react-native';
 import { createAppContainer } from 'react-navigation'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
-import NewsPage from './NewsPage'
+import IndexPage from './IndexPage'
 import MyPage from './MyPage'
+import ClassifyPage from './ClassifyPage'
+import CartPage from './CartPage'
 import FontAwesome from "react-native-vector-icons/FontAwesome"
 import NavigatorUtil from '../Navigator/NavigatorUtil'
 
 const TABS = {
-  NewsPage: {
-    screen: NewsPage,
+  IndexPage: {
+    screen: IndexPage,
     navigationOptions: {
-      tabBarLabel: '新闻',
+      tabBarLabel: '首页',
       tabBarIcon: ({ tintColor, focused }) => (
-        <FontAwesome name={"newspaper-o"} size={26} style={{ color: tintColor }} />
+        <FontAwesome name={"home"} size={26} style={{ color: tintColor }} />
+        )
+    }
+  },
+
+  ClassifyPage: {
+    screen: ClassifyPage,
+    navigationOptions: {
+      tabBarLabel: '分类',
+      tabBarIcon: ({ tintColor, focused }) => (
+        <FontAwesome name={"th"} size={26} style={{ color: tintColor }} />
+        )
+    }
+  },
+
+  CartPage: {
+    screen: CartPage,
+    navigationOptions: {
+      tabBarLabel: '购物车',
+      tabBarIcon: ({ tintColor, focused }) => (
+        <FontAwesome name={"shopping-cart"} size={26} style={{ color: tintColor }} />
         )
     }
   },

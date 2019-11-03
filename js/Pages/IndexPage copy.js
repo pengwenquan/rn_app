@@ -66,14 +66,6 @@ const NewsItem = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{props.name}</Text>
-      <Button
-        title="改变主题"
-        onPress={() => {onThemeChange("#ff0")}}
-      />
-      <Button
-        title="详情页"
-        onPress={() => { NavigatorUtil.navigation.navigate("DetailPage") }}
-      />
     </View>
   )
 }
