@@ -6,10 +6,11 @@ import {
 
 import { createStackNavigator } from 'react-navigation-stack'
 
-import WelcomePage from '../Pages/WelcomePage'
+import WelcomePage from '../Pages/WelcomePage/WelcomePage'
 import HomePage from '../Pages/HomePage'
-import DetailPage from '../Pages/DetailPage'
-import LoginPage from '../Pages/LoginPage'
+import DetailPage from '../Pages/DetailPage/DetailPage'
+import LoginPage from '../Pages/LoginPage/LoginPage'
+import searchPage from '../Pages/SearchPage/SearchPage'
 import { connect } from "react-redux";
 import {
   createReactNavigationReduxMiddleware,
@@ -40,6 +41,12 @@ const Main = createStackNavigator({
     screen: DetailPage,
     navigationOptions: {
      
+    }
+  },
+  searchPage: {
+    screen: searchPage,
+    navigationOptions: {
+      header: null
     }
   },
 })

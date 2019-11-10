@@ -5,9 +5,9 @@ import {
   Text,
   Button
 } from 'react-native';
-import DataStore from '../Http/AsyncStorange'
+import DataStore from '../../Http/AsyncStorange'
 import { connect } from 'react-redux'
-import { onThemeChange } from '../Actions/theme'
+import { onThemeChange } from '../../Actions/theme'
 
 class DetailPage extends React.Component {
   constructor(props) {

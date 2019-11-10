@@ -7,10 +7,10 @@ import {
 } from 'react-native';
 import { createAppContainer } from 'react-navigation'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
-import IndexPage from './IndexPage'
-import MyPage from './MyPage'
-import ClassifyPage from './ClassifyPage'
-import CartPage from './CartPage'
+import IndexPage from './IndexPage/IndexPage'
+import MyPage from './MyPage/MyPage'
+import ClassifyPage from './ClassifyPage/ClassifyPage'
+import CartPage from './CartPage/CartPage'
 import FontAwesome from "react-native-vector-icons/FontAwesome"
 import NavigatorUtil from '../Navigator/NavigatorUtil'
 

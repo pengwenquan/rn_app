@@ -1,6 +1,6 @@
 export default class NavigatorUtil {
   static goPage(props, page) {
-    const Navigation = NavigatorUtil.avigation
+    const Navigation = NavigatorUtil.navigation
     Navigation.navigate(page, {
       ...props
     })

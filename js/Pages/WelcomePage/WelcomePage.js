@@ -4,7 +4,7 @@ import {
   View,
   Text,
 } from 'react-native';
-import NavigatorUtil from '../Navigator/NavigatorUtil'
+import NavigatorUtil from '../../Navigator/NavigatorUtil'
 
 
 const WelcomePage = (props) => {
